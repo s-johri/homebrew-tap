@@ -5,13 +5,13 @@
 class Sshush < Formula
   desc "Interactive TUI for SSH keys, the agent, and ~/.ssh/config"
   homepage "https://github.com/s-johri/sshush"
-  version "0.7.0"
+  version "0.9.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/s-johri/sshush/releases/download/v0.7.0/sshush_darwin_amd64.tar.gz"
-      sha256 "020121c42278657ec89e41cb260f83f56441696dfc123a5c49e734a4b2b3a917"
+      url "https://github.com/s-johri/sshush/releases/download/v0.9.0/sshush_darwin_amd64.tar.gz"
+      sha256 "fcfe82b4831e7430546a295150177bc38a14f6b0094db08ec03c516b1725f7d1"
 
       define_method(:install) do
         bin.install "sshush"
@@ -22,8 +22,8 @@ class Sshush < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/s-johri/sshush/releases/download/v0.7.0/sshush_darwin_arm64.tar.gz"
-      sha256 "3d522d714847dddfc515b39dc03fe603e6184d09e12b706a150d6690a3a163a3"
+      url "https://github.com/s-johri/sshush/releases/download/v0.9.0/sshush_darwin_arm64.tar.gz"
+      sha256 "14581f0d70277679139cc979ba1435b3a4b41cc24d0e24d89c63aca8d526ed6e"
 
       define_method(:install) do
         bin.install "sshush"
@@ -37,8 +37,8 @@ class Sshush < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/s-johri/sshush/releases/download/v0.7.0/sshush_linux_amd64.tar.gz"
-      sha256 "7497d33d48d74cf4a8a0004298441337be7c2fe5fbfc290459e84fe55ef4bbaa"
+      url "https://github.com/s-johri/sshush/releases/download/v0.9.0/sshush_linux_amd64.tar.gz"
+      sha256 "21cd0ed1462e4b4ce135948bfefed45c40054b0a4076a36d5e034fa0dd3bcb0f"
       define_method(:install) do
         bin.install "sshush"
         bash_completion.install "completions/sshush.bash" => "sshush"
@@ -48,8 +48,8 @@ class Sshush < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/s-johri/sshush/releases/download/v0.7.0/sshush_linux_arm64.tar.gz"
-      sha256 "a6d139474333742b1a90f5ef6e8243c45db52eb429503c8242a8dae4742d4a7f"
+      url "https://github.com/s-johri/sshush/releases/download/v0.9.0/sshush_linux_arm64.tar.gz"
+      sha256 "5721a50d00c779c979f705a1eebb13a3fde333975cd25daea1c859f043574dc8"
       define_method(:install) do
         bin.install "sshush"
         bash_completion.install "completions/sshush.bash" => "sshush"
